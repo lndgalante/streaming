@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Tailwind Namespace Variables */
+  --color-ui-lime: #d8db2f;
+  --color-ui-slate-900: #133041;
+  --color-ui-slate-700: #4e6e7e;
+  --color-ui-slate-500: #6b94a8;
+  --color-ui-slate-300: #9abed5;
+  --color-ui-slate-100: #e4f4fd;
+  --color-ui-white: #ffffff;
+  --color-ui-red: #d73328;
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --radius-ui-container: 24px;
+  --radius-ui-box: 80px;
+
+  /* Custom Variables */
+  --container-max-width: 1008px;
+  --form-min-height: 526px;
+  --requests-md-min-height: 526px;
+  --requests-sm-min-height: 302px;
+}
