@@ -1,13 +1,18 @@
 {
-	"name": "streaming",
-	"module": "index.ts",
-	"type": "module",
-	"private": true,
-	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
-		"typescript": "^5.8.3"
-	}
+  "name": "streaming",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "type:check": "tsc --noEmit",
+    "biome:lint": "biome lint .",
+    "biome:check": "biome check --write --unsafe ."
+  }
 }

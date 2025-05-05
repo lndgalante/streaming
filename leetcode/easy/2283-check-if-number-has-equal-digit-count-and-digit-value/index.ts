@@ -34,29 +34,29 @@ Constraints:
 */
 
 function digitCount(num: string): boolean {
-	const splittedNum = num.split("");
+  const splittedNum = num.split("");
 
-	const totalTimesByDigit = splittedNum.reduce(
-		(accumulator, number) => {
-			return {
-				...accumulator,
-				[number]: (accumulator[number] ?? 0) + 1,
-			};
-		},
-		{} as Record<string, number>,
-	);
+  const totalTimesByDigit = splittedNum.reduce(
+    (accumulator, number) => {
+      return {
+        ...accumulator,
+        [number]: (accumulator[number] ?? 0) + 1,
+      };
+    },
+    {} as Record<string, number>,
+  );
 
-	return splittedNum.every((digit, index) => {
-		const totalDigitTimes = totalTimesByDigit[index] ?? 0;
-		return Number(digit) === totalDigitTimes;
-	});
+  return splittedNum.every((digit, index) => {
+    const totalDigitTimes = totalTimesByDigit[index] ?? 0;
+    return Number(digit) === totalDigitTimes;
+  });
 }
 
 if (import.meta.vitest) {
-	const { it, expect } = import.meta.vitest;
+  const { it, expect } = import.meta.vitest;
 
-	it("digitCount", () => {
-		expect(digitCount("1210")).toBe(true);
-		expect(digitCount("030")).toBe(false);
-	});
+  it("digitCount", () => {
+    expect(digitCount("1210")).toBe(true);
+    expect(digitCount("030")).toBe(false);
+  });
 }
